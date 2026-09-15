@@ -20,5 +20,27 @@ namespace PortalFp.Login
         {
             InitializeComponent();
         }
+
+        private void BtnAcceder_Click(object sender, RoutedEventArgs e)
+        {
+            String nombre= TxtNombre.Text.Trim();
+            String contrasenya= TxtContrasenya.Password.Trim();
+
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(contrasenya))
+            {
+                TxtFeedback.Text = "Uno o más campos estan vacíos.";
+                TxtFeedback.Foreground = Brushes.Red;
+            }
+            else if (nombre == "admin" && contrasenya == "1234")
+            {
+                TxtFeedback.Text = $"Acceso concedido. Bienvenido {nombre}";
+                TxtFeedback.Foreground = Brushes.Green;
+            }
+            else
+            {
+                TxtFeedback.Text = "Credenciales incorrectas.";
+                TxtFeedback.Foreground = Brushes.Red;
+            }
+        }
     }
 }

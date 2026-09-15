@@ -61,8 +61,7 @@
 
         <!-- Fila 5: Contenedor para el botón con IsDefault y TabIndex -->
         <Button x:Name="BtnAcceder" 
-                Content="Acceder" 
-                Click="BtnAcceder_Click"
+                Content="Acceder"
                 Padding="10,5" 
                 FontSize="14"
                 Margin="0,0,0,15"
@@ -72,7 +71,7 @@
                 IsDefault="True"
                 AutomationProperties.Name="Botón de acceso"
                 AutomationProperties.HelpText="Al hacer clic o presionar Enter, se iniciara
-                sesión."/>
+                sesión." Click="BtnAcceder_Click"/>
 
         <!-- Fila 6: Mensaje de feedback -->
         <TextBlock x:Name="TxtFeedback" 
